@@ -1,4 +1,3 @@
-# End-to-End-Real-Time-Data-Pipeline-Kafka-Spark-Streaming-Cassandra
 
 # End-to-End Real-Time Data Pipeline: Kafka, Spark Streaming, & Cassandra
 
