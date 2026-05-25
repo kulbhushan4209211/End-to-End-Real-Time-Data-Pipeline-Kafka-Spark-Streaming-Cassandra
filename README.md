@@ -27,33 +27,6 @@ The pipeline is built using a microservices architecture orchestrated via Docker
 * **Automated Infrastructure:** The `spark_stream.py` script automatically establishes the Cassandra connection, initializes the `spark_streams` keyspace, and defines the schema, requiring zero manual database setup.
 * **Custom Cluster Resource Management:** Explicitly handles worker/executor memory allocations to prevent resource deadlocks on local hardware.
 
-## ⚙️ Prerequisites
-
-* Docker Desktop (with WSL2 backend if on Windows)
-* At least 4GB of RAM allocated to Docker.
-
-## 🏃‍♂️ Quick Start
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-    cd YOUR_REPO_NAME
-    ```
-
-2.  **Spin up the cluster:**
-    ```bash
-    docker compose up -d
-    ```
-
-3.  **Monitor the Stream:**
-    ```bash
-    docker logs -f spark-stream-job
-    ```
-
-4.  **Verify Data in Cassandra:**
-    ```bash
-    docker exec -it cassandra cqlsh -e "SELECT * FROM spark_streams.created_users LIMIT 10;"
-    ```
 
 ## 🧠 Engineering Challenges Solved
 
